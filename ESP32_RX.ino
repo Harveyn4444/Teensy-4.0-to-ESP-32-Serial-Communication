@@ -11,9 +11,8 @@ struct RECEIVE_DATA_STRUCTURE{
   //put your variable definitions here for the data you want to receive
   //THIS MUST BE EXACTLY THE SAME ON THE OTHER ARDUINO/Board
   int16_t number;
-  uint32_t number2;
+  char Text[10] = "Hello World";
 };
-
 //give a name to the group of data
 RECEIVE_DATA_STRUCTURE mydata;
 
@@ -23,7 +22,7 @@ void setup() {
   //Starts the second Serial interaction (Baud Rate, Serial Format, RX, TX )
   SerialPort.begin(115200, SERIAL_8N1, 16, 17); 
   ET.begin(details(mydata), &SerialPort);
-  //Make sure to have Transmitter RX(Teensy 4.0) go to reciever TX (ESP32) and vice versa
+  //Make sure to have Transmitter RX pin (Teensy 4.0) go to reciever TX pin (ESP32) and vice versa
 }
 
 void loop() {
@@ -31,6 +30,6 @@ void loop() {
     //this is how you access the variables. [name of the group].[variable name]
     //since we have data, we will print it out. 
   Serial.println(mydata.number);
-  Serial.println(mydata.number2);
+  Serial.println(mydata.Text);
   }
 }
