@@ -10,7 +10,9 @@ My code is merely an example sketch using their code, they are the creators.
 Included is some basic examples and some example using some popular sensors
 
 ESP 32 DEV KIT 1 Pinout Diagram 
+
 ![image](https://user-images.githubusercontent.com/73143248/215633329-e2ac5d06-456c-49dc-b25c-3e21d96c74ad.png)
 
 Teensy 4.0 Pinout Diagram
+
 ![image](https://user-images.githubusercontent.com/73143248/215633431-0ab12ae5-55e5-4507-908d-c04db1cf5576.png)
